@@ -236,12 +236,12 @@ namespace ChallengesWithTestsMark8.Tests
             int negative3 = -3;
 
             // Act
-            Action actual1 = () => challenger.Factorial(negative1);
-            Action actual2 = () => challenger.Factorial(negative2);
-            Action actual3 = () => challenger.Factorial(negative3);
+            void value() => challenger.Factorial(negative1);
+            void actual2() => challenger.Factorial(negative2);
+            void actual3() => challenger.Factorial(negative3);
 
             // Assert
-            Assert.Throws<ArgumentOutOfRangeException>(actual1);
+            Assert.Throws<ArgumentOutOfRangeException>(value);
             Assert.Throws<ArgumentOutOfRangeException>(actual2);
             Assert.Throws<ArgumentOutOfRangeException>(actual3);
         }
