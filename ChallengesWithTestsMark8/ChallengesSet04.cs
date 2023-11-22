@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Reflection;
@@ -135,9 +136,17 @@ namespace ChallengesWithTestsMark8
             }
 
             int sum = 1;
-            for (int i = 1; i <= number; i++) 
+
+            if (number < 0)
             {
-                sum *= i;
+                throw new ArgumentOutOfRangeException();
+            }
+            else
+            {
+                for (int i = 1; i <= number; i++)
+                {
+                    sum *= i;
+                }
             }
 
             return sum;

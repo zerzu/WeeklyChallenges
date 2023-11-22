@@ -230,7 +230,7 @@ namespace ChallengesWithTestsMark8.Tests
         public void NegativeFactorialShouldThrowArgumentOutOfRangeException()
         {
             // Arrange
-            ChallengesSet04 challenger = new ChallengesSet04();
+            ChallengesSet04 challenger = new();
             int negative1 = -1;
             int negative2 = -2;
             int negative3 = -3;
